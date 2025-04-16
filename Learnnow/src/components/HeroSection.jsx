@@ -23,17 +23,17 @@ const HeroSection = () => {
                 </div>
                 <div className='flex space-x-20 pt-8'>
                     <div>
-                        <p>{courses}</p>
-                        <p>Courses to <br/>choose from</p>
+                        <p className='md:text-2xl text-sm text-teal-600 font-semibold'>{courses}</p>
+                        <p className='md:text-lg text-sm font-light'>Courses to <br/>choose from</p>
                     </div>
                     <div>
-                        <p>{studentTrained}</p>
-                        <p>Student</p>
-                        <p>trained</p>
+                        <p className='md:text-2xl text-sm text-blue-600 font-semibold'>{studentTrained}</p>
+                        <p className='md:text-lg text-sm font-light'>Student</p>
+                        <p className='md:text-lg text-sm font-light'>trained</p>
                     </div>
                     <div>
-                        <p>{professionalTrainers}</p>
-                        <p>Professional <br/>Trainers</p>
+                        <p className='md:text-2xl text-sm text-orange-600 font-semibold'>{professionalTrainers}</p>
+                        <p className='md:text-lg text-sm font-light'>Professional <br/>Trainers</p>
                     </div>
                 </div>
             </div>

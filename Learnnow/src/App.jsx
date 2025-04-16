@@ -6,12 +6,15 @@ import ContactUs from "./pages/ContactUs"
 import Learn from "./pages/Learn"
 import Login from "./pages/Login"
 import Review from "./pages/Reviews"
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 
 
 const App = () => {
   return (
-    <div className='overflex-x-hidden'>
+    <div className='overflex-x-hidden container'>
+      <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>} />
@@ -20,6 +23,7 @@ const App = () => {
         <Route path='/login' element={<Login/>} />
         <Route path='/review' element={<Review/>} />
       </Routes>
+      <Footer/>
     </div>
   )
 }
