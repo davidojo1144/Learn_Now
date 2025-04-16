@@ -6,6 +6,11 @@ const LearnNowContextProvider = (props)=> {
 
 
 
+    const studentTrained = "1000+"
+    const courses = "100+"
+    const professionalTrainers = "50+"
+
+
 
 
 
@@ -13,6 +18,9 @@ const LearnNowContextProvider = (props)=> {
 
 
     const value = {
+        studentTrained,
+        courses,
+        professionalTrainers
         
     }
 
