@@ -17,7 +17,7 @@ const HeroSection = () => {
                     <p>Learning is not just filling the mind with facts—it’s igniting a fire of curiosity<br/> that never burns out. Every lesson is a step forward, every mistake a hidden<br/> lesson, and every question a door to new worlds.
                         The more you learn, the more<br/> you realize how much there is yet to discover. Knowledge is not a destination but<br/> a journey—one that shapes your thoughts, expands your horizons, and makes life<br/> richer.</p>
                 </div>
-                <div className='space-x-10  pt-5 items-center'>
+                <div className='md:space-x-10 space-x-2  pt-5 items-center'>
                     <button className='py-1 px-5 bg-blue-400 text-white hover:bg-blue-500 rounded-full '>Start Trial</button>
                     <button className='text-blue-500 py-1 px-5 bg-white rounded-full border-2 border-blue-500'>How it works</button>
                 </div>
