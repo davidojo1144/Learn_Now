@@ -1,4 +1,7 @@
 import logo from "./logo.png"
+import cancel from "./cancel.png"
+import menu from "./menu.png"
+import heroimg from "./heroimg.jpg"
 
 
 
@@ -7,5 +10,8 @@ import logo from "./logo.png"
 
 
 export const assets = {
-    logo
+    logo,
+    cancel,
+    menu,
+    heroimg
 }

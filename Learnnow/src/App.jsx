@@ -11,10 +11,14 @@ import Review from "./pages/Reviews"
 
 const App = () => {
   return (
-    <div className='overflex-x-hidden '>
+    <div className='overflex-x-hidden'>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/' element={<About/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/contactus' element={<ContactUs/>} />
+        <Route path='/learn' element={<Learn/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/review' element={<Review/>} />
       </Routes>
     </div>
   )
