@@ -8,6 +8,9 @@ import google from "./google.png"
 import skillshare from "./skillshare-logo-.png"
 import stanford from "./stanford.png"
 import udemy from "./udemy.png"
+import signup from "./signup.png"
+import learning from "./learning.png"
+import lesson from "./lesson.png"
 
 
 
@@ -24,5 +27,8 @@ export const assets = {
     google,
     skillshare,
     stanford,
-    udemy
+    udemy,
+    signup,
+    learning,
+    lesson
 }
