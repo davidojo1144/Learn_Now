@@ -2,7 +2,12 @@ import logo from "./logo.png"
 import cancel from "./cancel.png"
 import menu from "./menu.png"
 import heroimg from "./heroimg.jpg"
-
+import ibm from "./Color-IBM-Logo.png"
+import coursera from "./courser.webp"
+import google from "./google.png"
+import skillshare from "./skillshare-logo-.png"
+import stanford from "./stanford.png"
+import udemy from "./udemy.png"
 
 
 
@@ -13,5 +18,11 @@ export const assets = {
     logo,
     cancel,
     menu,
-    heroimg
+    heroimg,
+    ibm,
+    coursera,
+    google,
+    skillshare,
+    stanford,
+    udemy
 }

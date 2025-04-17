@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div className='flex md:flex-row flex-col justify-between md:space-y-0 space-y-7 border-2 shadow-xl p-8 rounded-xl '>
             <div>
                 <div className='space-y-5'>
-                    <h1 className='prata-regular md:text-4xl text-2xl font-bold min-w-5'>Learn Everyday, Anytime and <br/>Anywhere</h1>
+                    <h1 className='prata-regular md:text-4xl text-2xl font-bold min-w-5'>Learn Everyday, Anytime and <br/>Anywhere.</h1>
                     <p>Learning is not just filling the mind with facts—it’s igniting a fire of curiosity<br/> that never burns out. Every lesson is a step forward, every mistake a hidden<br/> lesson, and every question a door to new worlds.
                         The more you learn, the more<br/> you realize how much there is yet to discover. Knowledge is not a destination but<br/> a journey—one that shapes your thoughts, expands your horizons, and makes life<br/> richer.</p>
                 </div>
