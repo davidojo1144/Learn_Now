@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { assets } from '../assets/assets'
 import { LearnNowContext } from '../context/LearnNowContext'
 
-const HeroSection = () => {
+const HeroSection = ({scrollToHowItWorks}) => {
 
     const { studentTrained, courses, professionalTrainers} = useContext(LearnNowContext)
 
@@ -19,7 +19,7 @@ const HeroSection = () => {
                 </div>
                 <div className='md:space-x-10 space-x-2  pt-5 items-center'>
                     <button className='py-1 px-5 bg-blue-400 text-white hover:bg-blue-500 rounded-full '>Start Trial</button>
-                    <button className='text-blue-500 py-1 px-5 bg-white rounded-full border-2 border-blue-500'>How it works</button>
+                    <button onClick={scrollToHowItWorks} className='text-blue-500 py-1 px-5 bg-white rounded-full border-2 border-blue-500'>How it works</button>
                 </div>
                 <div className='flex md:space-x-20 space-x-8 pt-8'>
                     <div>

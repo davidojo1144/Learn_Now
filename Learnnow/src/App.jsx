@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div className='overflow-x-hidden container'>
+    <div className='overflow-x-hidden'>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
