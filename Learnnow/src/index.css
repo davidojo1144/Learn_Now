@@ -30,3 +30,9 @@ html {
 body {
     background-color: mintcream;
 }
+
+
+footer {
+    background-color: #3A6B95; /* Darker Steel Blue */
+    color: white; /* For text contrast */
+  }
