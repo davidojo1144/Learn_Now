@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import HeroSection from '../components/HeroSection'
 import Organizations from '../components/Organizations'
 import HowItWorks from '../components/HowItWorks'
+import Video from '../components/Video'
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
       <HeroSection scrollToHowItWorks={scrollToHowItWorks} />
       <Organizations/>
       <HowItWorks ref={howItWorksRef} />
+      <Video/>
     </div>
   )
 }
