@@ -8,7 +8,7 @@ const Footer = () => {
       <div className='flex md:flex-row flex-col md:items-center md:space-y-0 space-y-10 justify-between container text-white'>
         <div>
           <img className='md:w-44 w-32' src={assets.logo} alt="" />
-          <p></p>
+          <p>Learning is the key to growth—it empowers <br/>you to adapt, overcome challenges, and unlock new <br/>opportunities. Every skill you gain and every idea you <br/>explore strengthens your future. Knowledge builds <br/>confidence, fuels progress, and keeps your mind sharp. <br/>No matter where life takes you, learning ensures you’re always <br/>moving forward.</p>
           <div>
             <div>
               <img src="" alt="" />
