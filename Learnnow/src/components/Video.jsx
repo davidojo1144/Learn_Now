@@ -15,10 +15,10 @@ const Video = () => {
   };
 
   return (
-    <div className='container pb-10'>
+    <div className='container pb-20'>
       <div>
         <div className='text-center md:text-2xl text-xl'>
-          <Title text1={"Why Learning"} text2={"Is Important"}/>
+          <Title text1={"Growth Mindset vs"} text2={"Fixed Mindset"}/>
         </div>
         <div className="w-full aspect-video rounded overflow-hidden">
           <YouTube
