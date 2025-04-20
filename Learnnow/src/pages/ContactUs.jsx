@@ -26,7 +26,7 @@ const ContactUs = () => {
               <input className='w-full py-1 px-5 border-2 rounded' type="text"  placeholder='Name'/>
               <input className='w-full py-3 px-5' type="email" placeholder='Email'/>
             </div>
-            <textarea className='w-full py-10 rounded' name="text" id="" placeholder='Message'></textarea>
+            <textarea className='w-full px-4 py-3 rounded' name="text" id="" placeholder='Message'></textarea>
             <button className='py-2 px-8 bg-blue-400 hover:bg-blue-500 rounded-xl text-white'>Send</button>
           </div>
         </div>
