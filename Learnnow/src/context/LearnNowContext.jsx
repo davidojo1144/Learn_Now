@@ -9,6 +9,8 @@ const LearnNowContextProvider = (props)=> {
     const studentTrained = "1000+"
     const courses = "100+"
     const professionalTrainers = "50+"
+    const email = "Learnnow@gmail.com"
+    const phone = "+234 802 546 ****"
 
 
 
@@ -20,7 +22,9 @@ const LearnNowContextProvider = (props)=> {
     const value = {
         studentTrained,
         courses,
-        professionalTrainers
+        professionalTrainers,
+        email,
+        phone
         
     }
 

@@ -5,10 +5,10 @@ import { assets } from '../assets/assets'
 const HowItWorks = forwardRef((props, ref) => {
   return (
     <>
-    <div className='bg-blue-100 pt-2 md:mt-20 mt-96 mb-20 pb-10'>
+    <div ref={ref} className='bg-blue-100 pt-2 md:mt-20 mt-96 mb-20 pb-10'>
       <div className='container pt-20 pb-10 space-y-8'>
         <div className='text-center max-w-md mx-auto md:space-y-5'>  
-            <h1 ref={ref} className='md:text-2xl text-xl prata-regular font-bold'>How It Works</h1>
+            <h1 className='md:text-2xl text-xl prata-regular font-bold'>How It Works</h1>
             <p className='text-sm px-4'>
             Learn effortlessly—sign up, choose your path, and grow at your pace. Track progress, enjoy the journey.
             </p>

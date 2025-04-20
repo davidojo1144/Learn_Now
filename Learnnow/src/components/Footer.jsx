@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         <div>
           <p className='md:text-xl text-lg md:pb-40 pb-2'>Address</p>
-          <p>145, Mark way <br/>Sabo Yaba <br/> Lagos State, Nigeria.</p>
+          <p className='text-sm font-light'>145, Mark way <br/>Sabo Yaba <br/> Lagos State, Nigeria.</p>
         </div>
       </div>
       <p className='text-center pt-10'>All Rights Reserved by © Learn Now 2025</p>

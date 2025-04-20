@@ -1,7 +1,12 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const ResponsiveNavbar = ({open}) => {
+
+  const navigate = useNavigate()
+
+
     return (
       <AnimatePresence>
         {open && (
@@ -14,22 +19,22 @@ const ResponsiveNavbar = ({open}) => {
           >
             <div className='p-5 space-y-6'>
               <div className='flex gap-3'>
-                <p>HOME</p>
+                <p onClick={()=>navigate("/")}>HOME</p>
               </div>
               <div className='flex gap-3'>
-                <p>LEARN</p>
+                <p onClick={()=>navigate("/learn")}>LEARN</p>
               </div>
               <div className='flex gap-3'>
-                <p>CONTACT US</p>
+                <p onClick={()=>navigate("/contactus")}>CONTACT US</p>
               </div>
               <div className='flex gap-3'>
-                <p>ABOUT</p>
+                <p onClick={()=>navigate("/about")}>ABOUT</p>
               </div>
               <div className='flex gap-3'>
-                <p>REVIEWS</p>
+                <p onClick={()=>navigate("/review")}>REVIEWS</p>
               </div>
               <div className='flex gap-3'>
-                <p>LOGIN</p>
+                <p onClick={()=>navigate("/login")}>LOGIN</p>
               </div>
             </div>
           </motion.div>
