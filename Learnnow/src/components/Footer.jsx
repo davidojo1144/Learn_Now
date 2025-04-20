@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <p className='md:text-xl text-lg pb-16'>Products</p>
+          <p className='md:text-xl text-lg pb-20'>Products</p>
           <div className='text-sm font-light'>
             <p>Writing & Note-Taking</p>
             <p>Reading & Reference</p>
@@ -34,17 +34,18 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <p className='md:text-xl text-lg'>Useful Links</p>
-          <div>
-            <a href="#"></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
+          <p className='md:text-xl text-lg pb-32'>Useful Links</p>
+          <div className='text-sm font-light'>
+            <p href="#">Blogs</p>
+            <p href="#">Pricing</p>
+            <p href="#">Certifications</p>
+            <p href="#">Reviews</p>
+            <p href="#">Success Stories</p>
           </div>
         </div>
         <div>
-          <p className='md:text-xl text-lg'>Address</p>
+          <p className='md:text-xl text-lg pb-40'>Address</p>
+          <p>145, Mark way <br/>Sabo Yaba <br/> Lagos State, Nigeria.</p>
         </div>
       </div>
     </footer>
