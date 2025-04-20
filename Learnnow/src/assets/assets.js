@@ -11,6 +11,9 @@ import udemy from "./udemy.png"
 import signup from "./signup.png"
 import learning from "./learning.png"
 import lesson from "./lesson.png"
+import twitter from "./twiiter.png"
+import instagram from "./instagram.png"
+import facebook from "./facebook.png"
 
 
 
@@ -30,5 +33,8 @@ export const assets = {
     udemy,
     signup,
     learning,
-    lesson
+    lesson,
+    facebook,
+    twitter,
+    instagram
 }
