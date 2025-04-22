@@ -14,6 +14,7 @@ import lesson from "./lesson.png"
 import twitter from "./twiiter.png"
 import instagram from "./instagram.png"
 import facebook from "./facebook.png"
+import aboutpic from "./aboutpic.jpg"
 
 
 
@@ -36,5 +37,6 @@ export const assets = {
     lesson,
     facebook,
     twitter,
-    instagram
+    instagram,
+    aboutpic
 }
