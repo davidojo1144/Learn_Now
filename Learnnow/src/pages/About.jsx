@@ -5,7 +5,7 @@ import { assets } from '../assets/assets'
 const About = () => {
   return (
     <div className='container'>
-       <div className='md:text-2xl text-xl text-center pb-10 '>
+       <div className='md:text-2xl text-xl text-center md:pb-10 pb-5 '>
           <Title text1={"ABOUT"} text2={"US"} />
         </div>
       <div className='flex md:flex-row flex-col justify-center gap-16'>
@@ -20,7 +20,7 @@ const About = () => {
         </div>
       </div>
       <div>
-        <div className='md:text-2xl text-xl  md:pt-16'>
+        <div className='md:text-2xl text-xl  md:pt-16 pt-10'>
           <Title text1={"WHY"} text2={"CHOOSE US"}/>
         </div>
       <div>
