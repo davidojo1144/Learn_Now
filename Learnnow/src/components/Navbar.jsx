@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { assets } from "../assets/assets"
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import ResponsiveNavbar from './ResponsiveNavbar'
 
 
 const Navbar = () => {
 
   const [open, setOpen] = useState(false)
+  const navigate = useNavigate()
 
 
   return (
@@ -38,7 +39,7 @@ const Navbar = () => {
       </ul>
         </div>
         <div>
-          <button className='text-sm md:block hidden py-2 px-6 bg-blue-400 hover:bg-blue-500 rounded text-white'>Login</button>
+          <button onClick={()=> navigate("/login")} className='text-sm md:block hidden py-2 px-6 bg-blue-400 hover:bg-blue-500 rounded text-white'>Login</button>
         </div>
         {/* {Mobile Menu} */}
           <div className='md:hidden w-6 h-6' onClick={()=> setOpen(!open)}>
