@@ -22,18 +22,12 @@ const App = () => {
     <div className='overflow-x-hidden'>
       <Navbar/>
       <Routes location={location} key={location.pathname}>
-      <Route path="/" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Home/> </motion.div> } />
-      <Route path="/about" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <About/> </motion.div> } />
-      <Route path="/contactus" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <ContactUs/> </motion.div> } />
-      <Route path="/learn" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Learn/> </motion.div> } />
-      <Route path="/login" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Login/> </motion.div> } />
-      <Route path="/review" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Review/> </motion.div> } />
-        {/* <Route path='/' element={<Home/>} />
-        <Route path='/about' element={<About/>} />
-        <Route path='/contactus' element={<ContactUs/>} />
-        <Route path='/learn' element={<Learn/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/review' element={<Review/>} /> */}
+      <Route path="/" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 5 }} exit={{ opacity: 5 }} transition={{ duration: 1 }}> <Home/> </motion.div> } />
+      <Route path="/about" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 5 }} exit={{ opacity: 5 }} transition={{ duration: 1 }}> <About/> </motion.div> } />
+      <Route path="/contactus" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 5 }} exit={{ opacity: 5 }} transition={{ duration: 1 }}> <ContactUs/> </motion.div> } />
+      <Route path="/learn" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 5 }} exit={{ opacity: 5 }} transition={{ duration: 1 }}> <Learn/> </motion.div> } />
+      <Route path="/login" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 5 }} exit={{ opacity: 5 }} transition={{ duration: 1 }}> <Login/> </motion.div> } />
+      <Route path="/review" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 5 }} exit={{ opacity: 5 }} transition={{ duration: 1 }}> <Review/> </motion.div> } />
       </Routes>
       <Footer/>
     </div>
