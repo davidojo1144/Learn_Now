@@ -39,7 +39,7 @@ const Navbar = () => {
       </ul>
         </div>
         <div>
-          <button onClick={()=> navigate("/login")} className='text-sm md:block hidden py-2 px-6 bg-blue-400 hover:bg-blue-500 rounded text-white'>Login</button>
+          <button onClick={()=> navigate("/login")} className='text-sm md:block hidden py-2 px-6 bg-blue-400 hover:bg-blue-500 rounded text-white'>Join Us</button>
         </div>
         {/* {Mobile Menu} */}
           <div className='md:hidden w-6 h-6' onClick={()=> setOpen(!open)}>
