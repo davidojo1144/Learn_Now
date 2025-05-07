@@ -169,7 +169,7 @@ const Login = () => {
             </p>
             <button 
               onClick={showChangePasswordForm}
-              className='mt-4 px-6 py-2 bg-blue-500 text-white rounded hover:bg-green-600'
+              className='mt-4 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600'
             >
               Change Password
             </button>
