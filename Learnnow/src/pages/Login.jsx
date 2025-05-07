@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+
 const Login = () => {
   const [formMode, setFormMode] = useState("Sign Up");
   const [full_name, setFullName] = useState("");
@@ -19,10 +20,9 @@ const Login = () => {
     setSuccess(false);
 
     try {
-      setLoading(true);
+      setLoading(true)
 
       if (formMode === "Sign Up") {
-        // Registration API call
         const response = await axios.post(
           'https://learning-management-systems-10.onrender.com/api/register/',
           { full_name, email, password, username }
@@ -30,15 +30,12 @@ const Login = () => {
         
         console.log('Registration successful:', response.data);
         setSuccess(true);
-        // Reset form after successful registration
         setFullName("");
         setEmail("");
         setPassword("");
         setUsername("");
-        // Switch to login form after successful registration
         setFormMode("Login");
       } else {
-        // Login API call
         const response = await axios.post(
           'https://learning-management-systems-10.onrender.com/api/login/',
           { email, password }
@@ -46,16 +43,16 @@ const Login = () => {
         
         console.log('Login successful:', response.data);
         
-        // Store token in localStorage
         localStorage.setItem('authToken', response.data.token);
         
-        // Store user data in localStorage if available
         if (response.data.user) {
           localStorage.setItem('user', JSON.stringify(response.data.user));
         }
         
-        // Redirect to home page immediately after successful login
-        navigate('/');
+        setTimeout(()=> {
+          navigate('/');
+        },4000)
+        
       }
     } catch (err) {
       console.error(`${formMode} failed:`, err);
@@ -67,6 +64,7 @@ const Login = () => {
     } finally {
       setLoading(false);
     }
+
   };
 
   const toggleFormMode = () => {
@@ -74,6 +72,9 @@ const Login = () => {
     setError(null);
     setSuccess(false);
   };
+  
+
+  
 
   return (
     <div className='container'>
