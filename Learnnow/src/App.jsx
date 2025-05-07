@@ -1,8 +1,8 @@
 import React from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
 import { Routes, Route, useLocation } from 'react-router-dom'
-// import { ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home"
 import About from "./pages/About"
 import ContactUs from "./pages/ContactUs"
@@ -29,6 +29,7 @@ const App = () => {
       <Route path="/login" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 5 }} exit={{ opacity: 5 }} transition={{ duration: 1 }}> <Login/> </motion.div> } />
       <Route path="/review" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 5 }} exit={{ opacity: 5 }} transition={{ duration: 1 }}> <Review/> </motion.div> } />
       </Routes>
+      <ToastContainer/>
       <Footer/>
     </div>
     </AnimatePresence>

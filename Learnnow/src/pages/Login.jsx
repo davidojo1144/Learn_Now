@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 
 const Login = () => {
@@ -30,6 +32,8 @@ const Login = () => {
         );
         
         console.log('Registration successful:', response.data);
+        toast.success("Registration successful")
+
         setSuccess(true);
         setFullName("");
         setEmail("");
@@ -43,6 +47,7 @@ const Login = () => {
         );
         
         console.log('Login successful:', response.data);
+        toast.success("Login successful")
         
         localStorage.setItem('authToken', response.data.token);
         
@@ -56,12 +61,13 @@ const Login = () => {
         
       }
     } catch (err) {
-      console.error(`${formMode} failed:`, err);
+      toast.error(`${formMode} failed:`, err);
       setError(
         err.response?.data?.message || 
         err.response?.data?.error || 
         `${formMode} failed. Please try again.`
       );
+      //toast.error("failed. Please try again.")
     } finally {
       setLoading(false);
     }
@@ -89,7 +95,7 @@ const Login = () => {
         </div>
         
         {/* Status messages */}
-        {error && (
+        {/* {error && (
           <div className="mb-4 p-2 bg-red-100 text-red-700 rounded w-full max-w-xs text-center">
             {error}
           </div>
@@ -98,7 +104,7 @@ const Login = () => {
           <div className="mb-4 p-2 bg-green-100 text-green-700 rounded w-full max-w-xs text-center">
             Registration successful! You can now login.
           </div>
-        )}
+        )} */}
 
         <div className='flex flex-col items-center w-full max-w-xs space-y-4 pt-5'>
           {formMode === "Sign Up" && (
