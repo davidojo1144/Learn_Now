@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 
 const Login = () => {
@@ -73,7 +74,9 @@ const Login = () => {
     setSuccess(false);
   };
   
-
+  // if (loading)  return <div className="flex items-center justify-center py-8"><LoadingSpinner/></div>
+    
+  
   
 
   return (
