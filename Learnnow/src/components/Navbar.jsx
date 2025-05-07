@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { assets } from "../assets/assets"
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import ResponsiveNavbar from './ResponsiveNavbar'
@@ -7,7 +7,19 @@ import ResponsiveNavbar from './ResponsiveNavbar'
 const Navbar = () => {
 
   const [open, setOpen] = useState(false)
+  const [logs, setLogs] = useState("Join Us")
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const token = localStorage.getItem("userToken");
+    if (token) {
+      setLogs("Log out")
+    } else {
+      setLogs("Join Us")
+    }
+  }, []);
+
+  
 
 
   return (
@@ -39,7 +51,7 @@ const Navbar = () => {
       </ul>
         </div>
         <div>
-          <button onClick={()=> navigate("/login")} className='text-sm md:block hidden py-2 px-6 bg-blue-400 hover:bg-blue-500 rounded text-white'>Join Us</button>
+          <button onClick={()=> navigate("/login")} className='text-sm md:block hidden py-2 px-6 bg-blue-400 hover:bg-blue-500 rounded text-white'>{logs}</button>
         </div>
         {/* {Mobile Menu} */}
           <div className='md:hidden w-6 h-6' onClick={()=> setOpen(!open)}>

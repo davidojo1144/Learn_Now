@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const ResponsiveNavbar = ({open}) => {
 
+  
+  const [logs, setLogs] = useState("Join Us")
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const token = localStorage.getItem("userToken");
+    if (token) {
+      setLogs("Log out")
+    } else {
+      setLogs("Join Us")
+    }
+  }, []);
 
 
     return (
@@ -34,7 +45,7 @@ const ResponsiveNavbar = ({open}) => {
                 <p onClick={()=>navigate("/review")}>REVIEWS</p>
               </div>
               <div className='flex gap-3'>
-                <p onClick={()=>navigate("/login")}>LOGIN</p>
+                <p onClick={()=>navigate("/login")}>{logs}</p>
               </div>
             </div>
           </motion.div>
