@@ -34,7 +34,7 @@ const Login = () => {
         console.log('Registration successful:', response.data);
         toast.success("Registration successful")
 
-        setSuccess(true);
+        //setSuccess(true);
         setFullName("");
         setEmail("");
         setPassword("");
@@ -57,7 +57,7 @@ const Login = () => {
         
         setTimeout(()=> {
           navigate('/');
-        },4000)
+        },5000)
         
       }
     } catch (err) {
@@ -80,7 +80,7 @@ const Login = () => {
     setSuccess(false);
   };
   
-  // if (loading)  return <div className="flex items-center justify-center py-8"><LoadingSpinner/></div>
+  if (loading)  return <div className="flex items-center justify-center py-8"><LoadingSpinner/></div>
     
   
   
