@@ -16,7 +16,7 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  // Check for existing token on component mount
+
   useEffect(() => {
     const token = localStorage.getItem("userToken");
     if (token) {
@@ -71,7 +71,7 @@ const Login = () => {
     setIsLoggedIn(false);
     setFormMode("Login");
     toast.success("Logged out successfully");
-    navigate('/login'); // Redirect back to login page
+    navigate('/login');
   };
 
   const toggleFormMode = () => {
@@ -88,7 +88,7 @@ const Login = () => {
       {isLoggedIn ? (
         <div className='flex flex-col items-center'>
           <p className='prata-regular text-center md:text-2xl text-xl font-medium mb-6'>
-            You are logged in
+            You are logged in!
           </p>
           <button 
             onClick={handleLogout}
