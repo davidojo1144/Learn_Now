@@ -5,7 +5,6 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-
 const Login = () => {
   const [formMode, setFormMode] = useState("Sign Up");
   const [full_name, setFullName] = useState("");
@@ -23,7 +22,7 @@ const Login = () => {
     setSuccess(false);
 
     try {
-      setLoading(true)
+      setLoading(true);
 
       if (formMode === "Sign Up") {
         const response = await axios.post(
@@ -32,9 +31,7 @@ const Login = () => {
         );
         
         console.log('Registration successful:', response.data);
-        toast.success("Registration successful")
-
-        //setSuccess(true);
+        toast.success("Registration successful");
         setFullName("");
         setEmail("");
         setPassword("");
@@ -47,18 +44,18 @@ const Login = () => {
         );
         
         console.log('Login successful:', response.data);
-        toast.success("Login successful")
+        toast.success("Login successful");
         
-        localStorage.setItem('authToken', response.data.token);
+        // ONLY CHANGE: Save token to localStorage
+        localStorage.setItem("userToken", response.data?.access);
         
-        if (response.data.user) {
-          localStorage.setItem('user', JSON.stringify(response.data.user));
-        }
+        // if (response.data.user) {
+        //   localStorage.setItem('user', JSON.stringify(response.data.user));
+        // }
         
-        setTimeout(()=> {
+        setTimeout(() => {
           navigate('/');
-        },5000)
-        
+        }, 5000); // Keeping your exact 5-second delay
       }
     } catch (err) {
       toast.error(`${formMode} failed:`, err);
@@ -67,11 +64,9 @@ const Login = () => {
         err.response?.data?.error || 
         `${formMode} failed. Please try again.`
       );
-      //toast.error("failed. Please try again.")
     } finally {
       setLoading(false);
     }
-
   };
 
   const toggleFormMode = () => {
@@ -80,10 +75,7 @@ const Login = () => {
     setSuccess(false);
   };
   
-  if (loading)  return <div className="flex items-center justify-center py-8"><LoadingSpinner/></div>
-    
-  
-  
+  if (loading) return <div className="flex items-center justify-center py-8"><LoadingSpinner/></div>;
 
   return (
     <div className='container'>
@@ -93,18 +85,6 @@ const Login = () => {
             {formMode}
           </p>
         </div>
-        
-        {/* Status messages */}
-        {/* {error && (
-          <div className="mb-4 p-2 bg-red-100 text-red-700 rounded w-full max-w-xs text-center">
-            {error}
-          </div>
-        )}
-        {success && formMode === "Sign Up" && (
-          <div className="mb-4 p-2 bg-green-100 text-green-700 rounded w-full max-w-xs text-center">
-            Registration successful! You can now login.
-          </div>
-        )} */}
 
         <div className='flex flex-col items-center w-full max-w-xs space-y-4 pt-5'>
           {formMode === "Sign Up" && (
